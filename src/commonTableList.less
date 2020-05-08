@@ -1,0 +1,231 @@
+@import '../node_modules/antd/lib/style/themes/default.less';
+@import '~@/utils/utils.less';
+
+.tableList {
+  .tableListOperator {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      margin-right: 8px;
+    }
+  }
+
+  .headerInfo {
+    position: relative;
+    text-align: center;
+
+    & > span {
+      display: inline-block;
+      margin-bottom: 4px;
+      color: @text-color-secondary;
+      font-size: @font-size-base;
+      line-height: 22px;
+    }
+
+    & > div {
+      margin: 0;
+      color: @heading-color;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    & > em {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 56px;
+      background-color: @border-color-split;
+    }
+  }
+
+  .extraContentSearch {
+    width: 272px;
+    margin-left: 16px;
+  }
+
+
+  :global {
+    .ant-table-row-collapsed::after {
+      content: '+';
+      margin-left: 6px;
+      margin-top: 3px;
+      float: left;
+      font-size: 0;
+      width: 0;
+      height: 0;
+      border-width: 8px;
+      border-style: solid;
+      border-color: transparent transparent transparent #9e9e9e;
+    }
+
+    .ant-table-row-expanded::after {
+      content: '-';
+      margin-top: 8px;
+      float: left;
+      font-size: 0;
+      width: 0;
+      height: 0;
+      border-width: 8px;
+      border-style: solid;
+      border-color: #9e9e9e transparent transparent transparent;
+    }
+
+    .ant-table-row-expand-icon {
+      border: none;
+      background: none;
+    }
+  }
+}
+
+.columnsnowrap {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.tableListForm {
+  :global {
+    .ant-form-item {
+      display: flex;
+      margin-right: 0;
+      margin-bottom: 24px;
+
+      > .ant-form-item-label {
+        width: auto;
+        padding-right: 8px;
+        line-height: 32px;
+      }
+
+      .ant-form-item-control {
+        line-height: 32px;
+      }
+    }
+
+    .ant-form-item-control-wrapper {
+      flex: 1;
+    }
+  }
+
+  .submitButtons {
+    display: block;
+    margin-bottom: 24px;
+    white-space: nowrap;
+  }
+}
+
+.lableText {
+  display: inline-block;
+  width: 77px;
+}
+
+.orgColor {
+  color: #F04134;
+}
+
+.greColor {
+  color: #52c41a;
+}
+
+.grayColor {
+  color: #9e9e9e;
+}
+
+@media screen and (max-width: @screen-lg) {
+  .tableListForm :global(.ant-form-item) {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .tableListForm :global(.ant-form-item) {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: @screen-sm) {
+  .extraContentSearch {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .headerInfo {
+    margin-bottom: 16px;
+
+    & > em {
+      display: none;
+    }
+  }
+}
+
+.standardListForm {
+  :global {
+    .ant-form-item {
+      margin-bottom: 12px;
+
+      &:last-child {
+        padding-top: 4px;
+      }
+    }
+  }
+}
+
+:global {
+  .ant-input[disabled] {
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    cursor: not-allowed;
+    opacity: 1;
+  }
+  .ant-checkbox-group{
+    vertical-align: middle;
+  }
+}
+
+.formResult {
+  width: 100%;
+
+  [class^='title'] {
+    margin-bottom: 8px;
+  }
+}
+
+.modaltitle {
+  font-weight: 600
+}
+
+.modalsmalltitle {
+  color: #333
+}
+
+//弹出框的内容设置--立案
+.formTooter {
+  position: absolute;
+  bottom: 53px;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #e8e8e8;
+}
+
+// 弹出框的内容设置-- 联名设置
+.cw_modal_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+  .cw_modal_body_title {
+    color: rgba(0, 0, 0, .85);
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .cw_choose_btn {
+    button {
+      margin: 30px 25px;
+    }
+  }
+}
+
